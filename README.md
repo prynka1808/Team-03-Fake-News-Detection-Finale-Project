@@ -1,4 +1,4 @@
-# Team-03-Fake-News-Detection-Finale-Project
+# Team-03-Fake-News-Detection-Final-Project
 Finale Project Data Science Masters 
 
 Machine Learning-powered Fake News Detection using NLP, BERT, and MLOps. Features automated data collection, model training, and real-time classification API
