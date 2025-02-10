@@ -2,7 +2,6 @@
 Finale Project Data Science Masters 
 # Fake-News_Detection
 Machine Learning-powered Fake News Detection using NLP, BERT, and MLOps. Features automated data collection, model training, and real-time classification API
-# Fake News Detection with Machine Learning 📰🧠
 
 # 🚀 Project Overview
 This project aims to build a **Machine Learning-powered Fake News Detection System** using **NLP, BERT, RoBERTa, and MLOps techniques**. The goal is to classify news articles as **real or fake**, automate data collection, and deploy a real-time API for news verification.
