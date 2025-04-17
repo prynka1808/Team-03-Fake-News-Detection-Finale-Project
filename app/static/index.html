@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📰 Fake News Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 60px auto;
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📰 Fake News Detector</h1>
+  <textarea id="newsText" placeholder="Paste your news article here..."></textarea><br>
+  <button onclick="checkNews()">Check News</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function checkNews() {
+      const text = document.getElementById("newsText").value;
+      const response = await fetch("/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+      });
+      const data = await response.json();
+      const result = document.getElementById("result");
+      result.textContent = `Prediction: ${data.prediction}`;
+      result.style.color = data.prediction === "Fake" ? "red" : "green";
+    }
+  </script>
+</body>
+</html>

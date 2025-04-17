@@ -1,0 +1,6 @@
+commands to open API and WEBSITE:
+cd C:\Users\Careen\mlops-airflow-project
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate.ps1
+cd app
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
